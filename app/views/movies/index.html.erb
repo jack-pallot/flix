@@ -1,0 +1,7 @@
+<h1 style="margin-bottom: 50px;">Movies</h1>
+
+<% @movies.each do |movie| %>
+  <%= render "movies/listing", movie: movie %>
+<% end %>
+
+<%= link_to "Add New", new_movie_path, class: "btn" %>

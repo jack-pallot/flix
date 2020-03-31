@@ -1,0 +1,11 @@
+<section class="movie">
+  <div class="poster image">
+    <%= image_tag movie.image_file_name %>
+  </div>
+
+  <div class="summary">
+    <h2><%= link_to movie.title, movie%></h2>
+    <h3><%= total_gross(movie) %></h3>
+    <p><%= movie.description.truncate(150, seperator: ' ') %></p>
+  </div>
+</section>
