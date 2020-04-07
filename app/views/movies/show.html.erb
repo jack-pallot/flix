@@ -20,9 +20,11 @@
       </tr>
     </table>
 
-    <section class="admin">
-      <%= link_to "Edit", edit_movie_path, class: "button" %>
-      <%= link_to "Delete", @movie, class: "button", method: :delete %>
-    </section>
+    <% if user_signed_in? %>
+      <section class="admin">
+        <%= link_to "Edit", edit_movie_path, class: "button" %>
+        <%= link_to "Delete", @movie, class: "button", method: :delete %>
+      </section>
+    <% end %>
   </div>
 </section>

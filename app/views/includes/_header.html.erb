@@ -6,5 +6,15 @@
         <%= link_to "All Movies", movies_path %>
       </li>
     </ul>
+
+    <ul style="float: right;">
+      <li>
+        <% if !user_signed_in? %>
+          <%= link_to "Login", user_session_path %>
+        <% else %>
+          <%= link_to "Logout", destroy_user_session_path %>
+        <% end %>
+      </li>
+    </ul>
   </nav>
 </header>

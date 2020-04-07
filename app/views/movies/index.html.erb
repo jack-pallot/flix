@@ -4,4 +4,6 @@
   <%= render "movies/listing", movie: movie %>
 <% end %>
 
-<%= link_to "Add New", new_movie_path, class: "btn" %>
+<% if user_signed_in? %>
+  <%= link_to "Add New", new_movie_path, class: "btn" %>
+<% end %>
